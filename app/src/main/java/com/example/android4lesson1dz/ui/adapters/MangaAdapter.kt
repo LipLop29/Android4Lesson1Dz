@@ -2,7 +2,7 @@ package com.example.android4lesson1dz.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android4lesson1dz.base.BaseDiffUtilItemCallback
 import com.example.android4lesson1dz.databinding.ItemAnimeMangaBinding
@@ -10,7 +10,7 @@ import com.example.android4lesson1dz.extention.setImage
 import com.example.android4lesson1dz.models.DataItem
 
 class MangaAdapter :
-    ListAdapter<DataItem, MangaAdapter.ViewHolder>(BaseDiffUtilItemCallback()) {
+    PagingDataAdapter<DataItem, MangaAdapter.ViewHolder>(BaseDiffUtilItemCallback()) {
 
     class ViewHolder(private val binding: ItemAnimeMangaBinding) :
         RecyclerView.ViewHolder(binding.root) {

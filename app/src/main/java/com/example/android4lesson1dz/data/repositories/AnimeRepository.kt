@@ -1,20 +1,23 @@
 package com.example.android4lesson1dz.data.repositories
 
-import androidx.lifecycle.liveData
-import com.example.android4lesson1dz.Resource
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import com.example.android4lesson1dz.data.repositories.pagingsources.AnimePagingSources
+import com.example.android4lesson1dz.base.BaseRepository
 import com.example.android4lesson1dz.data.remote.apiserveces.AnimeApiService
 import javax.inject.Inject
 
 class AnimeRepository @Inject constructor(
     private val animeApiService: AnimeApiService
-) {
+) : BaseRepository(){
 
-    fun fetchAnime() = liveData {
-        emit(Resource.Loading())
-        try {
-            emit(Resource.Success(animeApiService.fetchAnime()))
-        }catch (exception : Exception){
-            emit(Resource.Error(exception.localizedMessage ?: "Error", null))
-        }
+    fun fetchAnime() =
+        Pager(
+        PagingConfig(
+            pageSize = 20,
+            initialLoadSize = 10
+        )
+    ){
+        AnimePagingSources(animeApiService)
     }
 }

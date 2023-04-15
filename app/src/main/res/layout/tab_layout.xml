@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F7512D39"
-        app:tabSelectedTextColor="#AA3A1F"
+        app:layout_constraintBottom_toTopOf="@id/view_pager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabIndicatorColor="#03FF5722"
         app:tabIndicatorHeight="0dp"
-        app:tabMode="scrollable" />
+        app:tabSelectedTextColor="#FF5722"
+        app:tabTextAppearance="@style/textCaps" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
