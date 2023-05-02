@@ -2,6 +2,7 @@ package com.example.android4lesson1dz.data.repositories
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import androidx.paging.liveData
 import com.example.android4lesson1dz.data.repositories.pagingsources.MangaPagingSources
 import com.example.android4lesson1dz.base.BaseRepository
 import com.example.android4lesson1dz.data.remote.apiserveces.MangaApiService
@@ -18,5 +19,9 @@ class MangaRepository @Inject constructor(
         ),
         pagingSourceFactory = {
             MangaPagingSources(mangaApiService)
-        })
+        }).liveData
+
+    fun fetchDetailManga(id: String) = doRequest {
+        mangaApiService.fetchDetailManga(id)
+    }
 }

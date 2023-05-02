@@ -6,14 +6,23 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android4lesson1dz.base.BaseDiffUtilItemCallback
 import com.example.android4lesson1dz.databinding.ItemAnimeMangaBinding
-import com.example.android4lesson1dz.extention.setImage
+import com.example.android4lesson1dz.extensions.setImage
 import com.example.android4lesson1dz.models.DataItem
 
-class AnimeAdapter :
+class AnimeAdapter(
+    val onItemClick: (id: String) -> Unit
+) :
     PagingDataAdapter<DataItem, AnimeAdapter.ViewHolder>(BaseDiffUtilItemCallback()) {
 
-    class ViewHolder(private val binding: ItemAnimeMangaBinding) :
+    inner class ViewHolder(private val binding: ItemAnimeMangaBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            itemView.setOnClickListener {
+                getItem(absoluteAdapterPosition)?.let { anime -> onItemClick(anime.id) }
+            }
+        }
+
         fun onBind(item: DataItem?) {
             binding.itemAnimeImage.setImage(item!!.attributes.posterImage.original)
             binding.itemNameTv.text = item.attributes.titles.enJp

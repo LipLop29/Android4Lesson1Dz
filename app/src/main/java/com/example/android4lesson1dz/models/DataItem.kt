@@ -12,4 +12,4 @@ data class DataItem(
     override val id: String,
     @SerializedName("type")
     val type: String
-): IBaseDiffModel
+) : IBaseDiffModel

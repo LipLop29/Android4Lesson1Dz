@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailAnimeFragment"
+            app:destination="@id/detailAnimeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mangaDetailFragment"
+            app:destination="@id/mangaDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAnimeFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.anime.detail.DetailAnimeFragment"
+        android:label="DetailAnimeFragment"
+        tools:layout="@layout/fragment_detail_anime"
+        >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mangaDetailFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.manga.detail.MangaDetailFragment"
+        android:label="MangaDetailFragment"
+        tools:layout="@layout/fragment_manga_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>

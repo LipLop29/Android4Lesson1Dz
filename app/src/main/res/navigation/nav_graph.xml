@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/animeFragment">
+    app:startDestination="@id/homeFlowFragment">
 
     <fragment
-        android:id="@+id/animeFragment"
-        android:name="com.example.android4lesson1dz.ui.fragments.anime.AnimeFragment"
-        android:label="fragment_anime"
-        tools:layout="@layout/fragment_anime" />
+        android:id="@+id/signFlowFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.sign.in.flow.SignFlowFragment"
+        android:label="fragment_sign_flow"
+        tools:layout="@layout/fragment_sign_flow" >
+        <action
+            android:id="@+id/action_signFlowFragment_to_homeFlowFragment"
+            app:destination="@id/homeFlowFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/mangaFragment"
-        android:name="com.example.android4lesson1dz.ui.fragments.manga.MangaFragment"
-        android:label="fragment_manga"
-        tools:layout="@layout/fragment_manga" />
+        android:id="@+id/homeFlowFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.home.flow.HomeFlowFragment"
+        android:label="fragment_home_flow"
+        tools:layout="@layout/fragment_home_flow" />
 </navigation>
