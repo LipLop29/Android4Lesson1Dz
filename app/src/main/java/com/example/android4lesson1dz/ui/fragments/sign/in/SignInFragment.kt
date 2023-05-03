@@ -1,6 +1,5 @@
 package com.example.android4lesson1dz.ui.fragments.sign.`in`
 
-import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -31,14 +30,14 @@ class SignInFragment :
         subscribeToSignIn()
     }
 
-    private fun subscribeToSignIn() = with(binding){
+    private fun subscribeToSignIn() = with(binding) {
 
         btnInput.setOnClickListener {
+
             val email = inputLayoutEmail.text.toString()
             val password = inputLayoutPsw.text.toString()
-            val accessModel = AccessTokenModel(password, "password", email,)
+            val accessModel = AccessTokenModel(password, "password", email)
 
-            Log.e(TAG, "subscribeToSignIn: ", )
             viewModel.fetchSignIn(accessModel).subscribe(
                 onError = {
                     Log.e("TAG", "setupSubscribes: $it")
