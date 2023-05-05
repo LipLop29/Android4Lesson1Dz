@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailAnimeFragment"
-        android:name="com.example.android4lesson1dz.ui.fragments.anime.detail.DetailAnimeFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.home.anime.detail.DetailAnimeFragment"
         android:label="DetailAnimeFragment"
         tools:layout="@layout/fragment_detail_anime"
         >
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/mangaDetailFragment"
-        android:name="com.example.android4lesson1dz.ui.fragments.manga.detail.MangaDetailFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.home.manga.detail.MangaDetailFragment"
         android:label="MangaDetailFragment"
         tools:layout="@layout/fragment_manga_detail">
         <argument

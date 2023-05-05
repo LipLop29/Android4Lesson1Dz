@@ -9,7 +9,6 @@ import com.example.android4lesson1dz.base.BaseFragment
 import com.example.android4lesson1dz.data.local.preferences.PreferencesHelper
 import com.example.android4lesson1dz.data.local.preferences.UserPreferencesData
 import com.example.android4lesson1dz.databinding.FragmentSignInBinding
-import com.example.android4lesson1dz.extensions.toast
 import com.example.android4lesson1dz.models.auth.AccessTokenModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -43,7 +42,6 @@ class SignInFragment :
                     Log.e("TAG", "setupSubscribes: $it")
                 },
                 onSuccess = {
-                    toast("$it")
                     if (it != null) {
                         userPreferencesData.apply {
                             isAuthorized = true

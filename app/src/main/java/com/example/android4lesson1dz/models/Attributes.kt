@@ -3,8 +3,10 @@ package com.example.android4lesson1dz.models
 import com.google.gson.annotations.SerializedName
 
 data class Attributes(
+    @SerializedName("chapterCount")
+    val chapterCount: Int,
     @SerializedName("description")
-    val description: String ,
+    val description: String,
     @SerializedName("endDate")
     val endDate: String,
     @SerializedName("episodeCount")

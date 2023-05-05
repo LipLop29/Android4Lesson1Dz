@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFlowFragment"
-        android:name="com.example.android4lesson1dz.ui.fragments.home.flow.HomeFlowFragment"
+        android:name="com.example.android4lesson1dz.ui.fragments.home.HomeFlowFragment"
         android:label="fragment_home_flow"
         tools:layout="@layout/fragment_home_flow" />
 </navigation>

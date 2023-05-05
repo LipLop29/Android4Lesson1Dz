@@ -1,4 +1,4 @@
-package com.example.android4lesson1dz.ui.fragments.anime
+package com.example.android4lesson1dz.ui.fragments.home.anime
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn

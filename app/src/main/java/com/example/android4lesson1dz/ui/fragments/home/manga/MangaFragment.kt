@@ -1,4 +1,4 @@
-package com.example.android4lesson1dz.ui.fragments.manga
+package com.example.android4lesson1dz.ui.fragments.home.manga
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope

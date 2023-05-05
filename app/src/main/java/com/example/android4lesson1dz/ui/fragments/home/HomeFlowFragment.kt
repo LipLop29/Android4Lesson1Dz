@@ -1,10 +1,5 @@
-package com.example.android4lesson1dz.ui.fragments.home.flow
+package com.example.android4lesson1dz.ui.fragments.home
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.android4lesson1dz.R
 import com.example.android4lesson1dz.base.BaseFlowFragment
 
